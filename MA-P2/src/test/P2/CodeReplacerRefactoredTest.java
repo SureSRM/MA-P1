@@ -1,6 +1,4 @@
-package java;
-
-import static org.junit.Assert.*;
+package P2;
 
 /**
  * Created by sergio on 2/03/17.
@@ -8,7 +6,8 @@ import static org.junit.Assert.*;
 public class CodeReplacerRefactoredTest {
     @org.junit.Test
     public void substitute() throws Exception {
-
+        CodeReplacerRefactored c = new CodeReplacerRefactored();
+        c.substitute("",null);
     }
 
 }

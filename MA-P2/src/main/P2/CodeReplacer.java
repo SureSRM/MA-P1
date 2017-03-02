@@ -1,8 +1,9 @@
-package java;
+package P2;
 
 import java.io.*;
+import java.util.*;
 
-public class CodeReplacerRefactored {
+public class CodeReplacer {
 	public final String TEMPLATE_DIR = "user.dir";
 	String sourceTemplate;
 	String code;
