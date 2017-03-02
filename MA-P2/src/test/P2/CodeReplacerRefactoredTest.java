@@ -79,6 +79,22 @@ public class CodeReplacerRefactoredTest {
         assertEquals("1 2\n12\n",file.toString());
     }
 
+    @Test
+    public void substitute7() throws Exception {
+        c.substitute("Ser\ngio Mar\ntin", out ); // Reads \n as a regular char
+        assertEquals("Ser\ngio Mar\ntin\nSM\n",file.toString());
+    }
 
+    @Test
+    public void substitute8() throws Exception {
+        c.substitute("Ser\tgio Mar\ttin", out ); // Reads \n as a regular char
+        assertEquals("Ser\tgio Mar\ttin\nSM\n",file.toString());
+    }
+
+    @Test
+    public void substitute9() throws Exception {
+        c.substitute("Érgio Martín", out ); // Reads \n as a regular char
+        assertEquals("Érgio Martín\nÉM\n",file.toString());
+    }
 
 }
