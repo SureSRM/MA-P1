@@ -161,5 +161,14 @@ public class CalculadoraTest {
     public void sumar25() throws Exception {
         assertEquals(8, cal.sumar("//e\n 1 e -1 \n 8"));
     }
+    @Test
+    public void sumar26()throws Exception{
+        assertEquals(1002, cal.sumar("1000, 2"));
+    }
+    @Test
+    public void sumar27() throws Exception{
+        assertEquals(2,cal.sumar("1001,2"));
+    }
+
 
 }
