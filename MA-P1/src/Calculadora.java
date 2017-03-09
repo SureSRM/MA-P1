@@ -35,9 +35,14 @@ public class Calculadora {
 
         try {
         int suma = Integer.parseInt(nums[0]);
+            if(suma<0)
+                throw new CalculadoraException("Numeros negativos no permitidos: "+suma);
             for (int i = 1; i < nums.length; i+=2) {
                 if(nums[i].equals(delimitador)){
-                    suma+= Integer.parseInt(nums[i+1]);
+                    int aux = Integer.parseInt(nums[i+1]);
+                    if(aux<0)
+                        throw new CalculadoraException("Numeros negativos no permitidos: "+aux);
+                    suma+= aux;
                 }
             }
 

@@ -121,17 +121,17 @@ public class CalculadoraTest {
         }
     }
 
-    @Test
+    @Test(expected = CalculadoraException.class)
     public void sumar18() throws Exception {
-        assertEquals(-1, cal.sumar("-1"));
+        assertEquals(0, cal.sumar("-1"));
     }
 
-    @Test
+    @Test(expected = CalculadoraException.class)
     public void sumar19() throws Exception {
         assertEquals(1, cal.sumar("-1,2"));
     }
 
-    @Test
+    @Test(expected = CalculadoraException.class)
     public void sumar20() throws Exception {
         assertEquals(-1, cal.sumar(" - 1 "));
     }
@@ -142,7 +142,7 @@ public class CalculadoraTest {
         assertEquals(3, cal.sumar(" 1 \n 1, 1 "));
     }
 
-    @Test
+    @Test(expected = CalculadoraException.class)
     public void sumar22() throws Exception {
         assertEquals(8, cal.sumar(" 1 , -1 \n 8"));
     }
@@ -152,7 +152,7 @@ public class CalculadoraTest {
         assertEquals(4, cal.sumar(" 1 , 1, 1, 1"));
     }
 
-    @Test
+    @Test(expected = CalculadoraException.class)
     public void sumar24() throws Exception {
         assertEquals(8, cal.sumar("//e\n 1 e -1 e 8"));
     }
