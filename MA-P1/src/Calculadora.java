@@ -19,8 +19,7 @@ public class Calculadora {
 
             }
 
-            numero=numero.substring(numero.indexOf('\n'));
-
+            numero=numero.substring(numero.indexOf('\n')+1,numero.length());
             if(numero.contains("\n"))
                 throw new CalculadoraException();
         } else {
